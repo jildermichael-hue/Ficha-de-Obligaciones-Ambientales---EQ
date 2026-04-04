@@ -181,7 +181,7 @@ export default function App() {
     setError(null);
 
     try {
-      const apiKey = process.env.GEMINI_API_KEY;
+      const apiKey = import.meta.env.VITE_API_KEY;
       if (!apiKey) {
         throw new Error("API Key de Gemini no encontrada. Por favor, configúrala en el panel de Secretos.");
       }
